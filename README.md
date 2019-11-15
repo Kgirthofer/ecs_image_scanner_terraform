@@ -56,3 +56,5 @@ Now every time you push a new image to a repo, if you have "Scan on Push" enable
 
 ## Outputs
 
+- `kms_id` - KMS key ID
+- `kms_arn` - KMS key ARN
