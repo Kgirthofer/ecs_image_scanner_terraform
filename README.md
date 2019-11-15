@@ -4,6 +4,8 @@ a lil thing that scans your ECR images and then notifies slack if you have vulne
 
 ## Usage
 
+Make sure your new and old repos are set up to take advatage of ECS image scanning - I've incliuded an example repo in repo.tf
+
 Download the most recent version of boto3 - at the time of creating this the most recent version is 1.10.16.
 You need to do this because boto3 on lambda doesn't have ECR's new scanning capabilities. 
 ```console
