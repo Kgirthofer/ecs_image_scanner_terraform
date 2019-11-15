@@ -13,7 +13,7 @@ LIB_DIR=~/boto3/python
 mkdir -p $LIB_DIR
 pip3 install boto3 -t $LIB_DIR
 cd ~/boto3/
-aws lambda publish-layer-version --layer-name boto3-1.10.16 --zip-file fileb:///tmp/boto3-mylayer.zip
+aws lambda publish-layer-version --layer-name boto3-1-10-16 --zip-file fileb:///tmp/boto3-mylayer.zip
 ```
 
 Create a new KMS key 
