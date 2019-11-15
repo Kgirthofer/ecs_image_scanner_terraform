@@ -16,9 +16,9 @@ aws lambda publish-layer-version --layer-name boto3-1.10.16 --zip-file fileb:///
 
 Create a new KMS key 
 ```console
-createKey=`aws kms create-key --tags TagKey=Purpose,TagValue=Slack --description "Used for Lambda to encrypt and decrypt Slack URL"`
-keyId=`echo ${createKey} | jq -r '.KeyMetadata.KeyId'`
-keyArn=`echo ${createKey} | jq -r '.KeyMetadata.Arn'`
+createKey=`terraform apply --target=aws_kms_key.slack_lambda`
+keyId=`terraform output kms_id`
+keyArn=`terraform output kms_arn`
 aws kms create-alias --alias-name alias/LambdaSlack --target-key-id ${keyId}
 
 ```
