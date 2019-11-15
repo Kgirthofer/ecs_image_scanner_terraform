@@ -10,7 +10,7 @@ You need to do this because boto3 on lambda doesn't have ECR's new scanning capa
 LIB_DIR=~/boto3/python
 mkdir -p $LIB_DIR
 pip3 install boto3 -t $LIB_DIR
-cd boto3/
+cd ~/boto3/
 aws lambda publish-layer-version --layer-name boto3-1.10.16 --zip-file fileb:///tmp/boto3-mylayer.zip
 ```
 
